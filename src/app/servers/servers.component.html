@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let server of servers$ |async as servers" class="col-sm d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h3 class="card-title"><maniaplanet-name [name]="server.serverName"></maniaplanet-name></h3>
+                    <div  class="playersList">
+                        <h5>Players</h5>
+                        <ng-container *ngFor="let player of server.players">
+                            <maniaplanet-name [name]='player.name'></maniaplanet-name><br>
+                        </ng-container>
+                    </div><br>
+                    <h5>Current map</h5>
+                    <p class="card-text"><app-map-in-card [mapId]="server.currentMap"></app-map-in-card> </p>
+                    <h5>Coming next</h5>
+                    <p class="card-text"><app-map-in-card [mapId]="server.nextMap"></app-map-in-card></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

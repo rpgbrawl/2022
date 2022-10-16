@@ -1,0 +1,5 @@
+<div class="row justify-content-center">
+    <div *ngFor="let map of maps | keyvalue" class="col-lg-4">
+        <map-overview  [map]="map.value" [map-id]="map.key"></map-overview>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+.playersList:not(:has(span)):after{
+    content:"Nobody is connected yet";
+}
+.playersList:after{
+    font-style: italic;
+}
+.card{
+    margin: 10px;
+    background-color: transparent;
+    transition: 0.3s;
+    border: 1px solid #d9a304;
+}
