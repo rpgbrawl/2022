@@ -7,12 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ServersComponent } from './servers/servers.component';
 
 const routes: Routes = [
   { path:'',component:HomeComponent},
   { path:'bracket',component:BracketPageComponent},
-  { path:'servers',component:ServersComponent},
   { path:'maps',component:MapsComponent},
   { path:'admin',component:LoginComponent},
   { path:'admin/bracket',component:AdminBracketComponent,canActivate: [AuthGuard]},
